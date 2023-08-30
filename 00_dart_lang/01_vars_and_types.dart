@@ -10,8 +10,8 @@
  */
 
 void main() {
-  simpleTypes();
-  nullableTypes();
+  //simpleTypes();
+  //nullableTypes();
   complexTypes();
 }
 
@@ -19,20 +19,20 @@ void main() {
 
 void simpleTypes() {
   // try declaring the following with `var` and initializing them with `null`
-  int inum = 42;
-  double fpnum = 3.14;
-  String snum = '442';
+  var inum = 42;
+  var fpnum = 3.14;
+  var snum = '442';
 
   print('inum.runtimeType = ${inum.runtimeType}');
   print('fpnum.runtimeType = ${fpnum.runtimeType}');
   print('snum.runtimeType = ${snum.runtimeType}');
 
-  // inum = fpnum;
-  // fpnum = inum;
+  //inum = fpnum;
+  //fpnum = inum;
 
   inum = fpnum.toInt();
   fpnum = inum.toDouble();
-  // fpnum = inum as double;
+  //fpnum = inum as double;
 
   inum = int.parse(snum);
   snum = inum.toString();
@@ -41,15 +41,16 @@ void simpleTypes() {
 /*****************************************************************************/
 
 void nullableTypes() {
-  int n = 10; // try initializing with `null`
+  int? n; // try initializing with `null`
+  n = -442;
 
   print('n.runtimeType = ${n.runtimeType}');
 
   print(n == null);
 
-  print(n.abs());
+  print(n?.abs());
 
-  print(n + 10);
+  print(n! + 10);
 }
 
 /*****************************************************************************/
@@ -63,9 +64,9 @@ void complexTypes() {
 
   List<Object> listOfObjs = [inum, fpnum, snum];
 
-  var listOfNums = [inum, fpnum, -5, 0.01];
+  var listOfNums = [inum, fpnum, -5, 0.01]; //list of object num
 
-  var listOfStrs = [snum, 'mobile', 'app', 'dev'];
+  var listOfStrs = [snum, 'mobile', 'app', 'dev']; //list of object string
 
   var listOfUnknown = [];
 
@@ -82,7 +83,7 @@ void complexTypes() {
   print('listOfStrs3.runtimeType = ${listOfStrs3.runtimeType}');
 
   print(listOfObjs[0] is int);
-  // print(listOfObjs[0] + 10);
+  print((listOfObjs[0] as int) + 10);
 
   print(listOfObjs[2] is String);
   // print(listOfObjs[2].length);
