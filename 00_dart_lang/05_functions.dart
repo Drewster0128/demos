@@ -30,7 +30,7 @@ void parameterOptions() {
 }
 
 
-void printCharacterSheet(String name, [int hp=100, String? ability]) {
+void printCharacterSheet(String name, [int hp=100, String? ability]) { //parmeters in brackets are optional
   print('Name: $name');
   print('HP: $hp');
   if (ability != null) {
@@ -39,7 +39,7 @@ void printCharacterSheet(String name, [int hp=100, String? ability]) {
 }
 
 
-void printCharacterSheet2({
+void printCharacterSheet2({ //named parameters are optinal by default, to make necessary, use keyword "required"
   required String name,
   int hp=100,
   String? ability,
@@ -108,7 +108,7 @@ void hofs() {
   const list = ['dart', 'is', 'a', 'semi-cool', 'language'];
 
 
-  final pairs = map(list, (s) => (s.length, s));
+  final pairs = map(list, (s) => (s.length, s)); //start with empty new list. For each string in the input list, create a tuple of string length and the actual string. Then append to the new list. Finally, return new list
   print(pairs);
 
 

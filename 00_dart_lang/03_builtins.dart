@@ -59,12 +59,12 @@ void strings() {
 
 /*****************************************************************************/
 
-void records() {
-  (double,double) point1 = (3.14, 2.71);
+void records() { //records are immutable
+  (double,double) point1 = (3.14, 2.71); //records function the same as tuples in other languages
 
-  (double x, double y) point2 = (3, 2);
+  (double x, double y) point2 = (3, 2); //names don't stick
 
-  ({double x, double y}) point3 = (x: 3, y: 2);
+  ({double x, double y}) point3 = (x: 3, y: 2); //names stick because of curly braces
 
   ({double w, double z}) point4 = (w: 4, z: 3);
 
@@ -94,7 +94,7 @@ void records() {
 
 void collections() {
   // Lists
-  List<String> colors = ['red', 'green', 'blue'];
+  List<String> colors = ['red', 'green', 'blue']; //list with components of type string
   print('List: $colors');
   print('Second color: ${colors[1]}');
   colors.add('yellow');
@@ -102,7 +102,7 @@ void collections() {
   print('List length: ${colors.length}');
 
   // Sets
-  Set<int> numbers = {1, 2, 3, 4, 5};
+  Set<int> numbers = {1, 2, 3, 4, 5}; 
   print('\nSet: $numbers');
   numbers.add(3); // Adding a duplicate value
   print('Set after adding duplicate: $numbers');
@@ -111,11 +111,11 @@ void collections() {
   print('Set contains 5: ${numbers.contains(5)}');
 
   // Maps
-  Map<String, int> ages = {
+  Map<String, int> ages = { //maps are mutable
     'Alice': 30,
     'Bob': 25,
     'Carol': 28,
-  };
+  }; //map is the equivalent to a hashmap in java or a dictionary in python
   print('\nMap: $ages');
   ages['David'] = 22;
   print('Map after adding David: $ages');
@@ -123,7 +123,7 @@ void collections() {
 
   // Iterating over collections
   print('\nIterating over list:');
-  for (final color in colors) {
+  for (final color in colors) { //final variable cannot be reassigned, but can still use its mutable methods
     print(color);
   }
 
@@ -132,7 +132,7 @@ void collections() {
     print(number);
   }
 
-  print('\nIterating over map:');
+  print('\nIterating over map:'); //to iterate over the keys, use method .keys. To iterate over entries, use method .entries
   for (final entry in ages.entries) {
     print('${entry.key} is ${entry.value} years old');
   }

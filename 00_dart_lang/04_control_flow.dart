@@ -96,7 +96,7 @@ void branches() {
 
 
   // switch-case as expression
-  String? grade = switch(score) {
+  String? grade = switch(score) { //pattern matching
     100 || >= 90 => 'A',
     >= 80 => 'B',
     >= 70 => 'C',
@@ -120,7 +120,7 @@ void patterns() {
   Map<String,int> point4 = {'x': 7, 'y': 8};
 
 
-  var p = point4; // try different values for `p`
+  var p = point1; // try different values for `p`
 
 
   // switch pattern-matching
