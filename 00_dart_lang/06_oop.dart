@@ -12,12 +12,11 @@
 
 import 'dart:math';
 
+//put _ in front of variable to make it private
 
 // Classes
-class Shape {
-  double area() {
-    return 0; // can we get rid of this definition?
-  }
+abstract class Shape {
+  double area();
 }
 
 
