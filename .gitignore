@@ -861,3 +861,13 @@ Temporary Items
 # Archives         - https://github.com/github/gitignore/blob/main/Global/Archives.gitignore
 # Backup           - https://github.com/github/gitignore/blob/main/Global/Backup.gitignore
 # JEnv             - https://github.com/github/gitignore/blob/main/Global/JEnv.gitignore
+01_flutter_intro/macos/Flutter/ephemeral/flutter_export_environment.sh
+01_flutter_intro/macos/Flutter/ephemeral/.app_filename
+01_flutter_intro/macos/Flutter/ephemeral/Flutter-Generated.xcconfig
+01_flutter_intro/macos/Flutter/ephemeral/FlutterInputs.xcfilelist
+01_flutter_intro/macos/Flutter/ephemeral/FlutterOutputs.xcfilelist
+01_flutter_intro/macos/Flutter/ephemeral/tripwire
+02_flutter_state/macos/Flutter/ephemeral/flutter_export_environment.sh
+02_flutter_state/macos/Flutter/ephemeral/Flutter-Generated.xcconfig
+03_flutter_nav_route/macos/Flutter/ephemeral/flutter_export_environment.sh
+03_flutter_nav_route/macos/Flutter/ephemeral/Flutter-Generated.xcconfig
